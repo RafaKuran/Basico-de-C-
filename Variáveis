@@ -1,0 +1,25 @@
+using System;
+
+namespace MeuPrimeiroPrograma
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int i = 7;
+            double d = 1.5;
+            char c = 'a';
+            bool b = true;
+            string nome = "Rafa Miranda";
+            //ou atribuir valores do método tradicional ex: i = 7
+            //"a" = string, 'a' = char
+
+            Console.WriteLine(i); //pula de linha
+            Console.WriteLine(d);
+            Console.WriteLine(c);
+            Console.WriteLine(b);
+            Console.WriteLine(nome);
+            Console.ReadLine(); //leia
+        }
+    }
+}
