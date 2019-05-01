@@ -1,0 +1,14 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		int lado, area;
+				
+    	Console.Write("Lado do quadrado: ");
+    	lado = Convert.ToInt32(Console.ReadLine());
+		area = lado * lado;
+		Console.Write("A área total do quadrado é {0} cm.", area);
+	}
+}
