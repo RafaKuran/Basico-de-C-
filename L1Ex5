@@ -1,0 +1,16 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		double salario, reajuste;
+		
+		Console.Write("Qual o valor do salário: ");
+		salario = Convert.ToDouble(Console.ReadLine());
+		Console.Write("De quanto será o reajuste: ");
+		reajuste = Convert.ToDouble(Console.ReadLine());
+		
+		
+	}
+}
