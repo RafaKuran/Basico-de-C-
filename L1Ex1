@@ -1,0 +1,10 @@
+using System;
+class HelloWorld {
+  static void Main() {
+    int n1, n2;
+    n1 = 3;
+    n2 = 17;
+    
+    Console.Write("n1 = {0}, n2 = {1}",n2,n1);
+  }
+}
