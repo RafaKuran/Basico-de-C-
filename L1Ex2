@@ -1,0 +1,19 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		int n1, n2;
+    	double media;
+    
+    	Console.Write("Entre com a primeira nota: ");
+    	n1 = Convert.ToInt32(Console.ReadLine());
+		Console.Write("Entre com a segunda nota: ");
+    	n2 = Convert.ToInt32(Console.ReadLine());
+		
+		media = (n1 + n2) / 2.0 ;
+		
+		Console.Write("A média será {0}.", media);
+	}
+}
