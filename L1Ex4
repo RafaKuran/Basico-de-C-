@@ -1,0 +1,17 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		int conta;
+		double gorjeta, total;
+		
+    	Console.Write("Valor da conta: R$ ");
+    	conta = Convert.ToInt32(Console.ReadLine());
+		
+		gorjeta = conta * 0.1;
+		total = (conta + gorjeta);
+		Console.Write("A conta com gorjeta será R$ {0}.", total);
+	}
+}
