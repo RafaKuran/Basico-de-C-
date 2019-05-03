@@ -11,6 +11,8 @@ public class Program
 		Console.Write("De quanto será o reajuste: ");
 		reajuste = Convert.ToDouble(Console.ReadLine());
 		
+		salarioFinal = salario + (salario * (reajuste / 100));
 		
+		Console.Write("O salário reajustado será de R$ {0}", salarioFinal.ToString("N2"));
 	}
 }
