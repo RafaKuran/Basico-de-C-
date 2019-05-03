@@ -1,0 +1,51 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace L2Ex8
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int ip;
+
+            Console.Write("Entre com o IP: ");
+            ip = Convert.ToInt32(Console.ReadLine());
+
+            if ((ip >= 0) && (ip <= 127))
+            {
+                Console.WriteLine("IP Classe A.");
+            }
+          
+            else if ((ip >= 128) && (ip <= 191))
+            {
+                    Console.WriteLine("IP Classe B.");
+            }
+
+            else if ((ip >= 192) && (ip <= 223))
+            {
+                Console.WriteLine("IP Classe C.");
+            }
+
+            else if ((ip >= 224) && (ip <= 239))
+            {
+                Console.WriteLine("IP Classe D.");
+            }
+
+            else if ((ip >= 240) && (ip <= 255))
+            {
+                Console.WriteLine("IP Classe E.");
+            }
+
+            else
+            {
+                Console.WriteLine("IP inválido!");
+            }
+
+            Console.ReadLine();
+        }
+    }
+}
