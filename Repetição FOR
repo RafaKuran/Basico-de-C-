@@ -1,0 +1,24 @@
+using System;
+
+namespace DoWhile
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int mes;
+
+            do
+            {
+                Console.Write("Entre com um mês: ");
+                mes = Convert.ToInt32(Console.ReadLine());
+                if ((mes < 1) || (mes > 12))
+                {
+                    Console.WriteLine("Mês inválido!");
+                }
+            } while ((mes < 1) || (mes > 12));
+
+            Console.ReadLine();
+        }
+    }
+}
