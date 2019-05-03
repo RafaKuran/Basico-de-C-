@@ -1,0 +1,23 @@
+using System;
+
+
+namespace For
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int var, soma = 0;
+
+            Console.Write("Quantas repetições: ");
+            var = Convert.ToInt32(Console.ReadLine());
+
+            for (int i = 1; i <= var; i++)
+            {
+                soma = soma + i;
+            }
+            Console.WriteLine($"Soma = {soma}");
+            Console.ReadLine();
+        }
+    }
+}
