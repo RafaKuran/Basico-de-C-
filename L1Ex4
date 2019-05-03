@@ -4,14 +4,12 @@ public class Program
 {
 	public static void Main()
 	{
-		int conta;
-		double gorjeta, total;
+		double conta, total;
 		
-    	Console.Write("Valor da conta: R$ ");
-    	conta = Convert.ToInt32(Console.ReadLine());
+    		Console.Write("Valor da conta: R$ ");
+    		conta = Convert.ToDouble((Console.ReadLine()));
 		
-		gorjeta = conta * 0.1;
-		total = (conta + gorjeta);
+		total = conta + (conta * 0.1);
 		Console.Write("A conta com gorjeta será R$ {0}.", total);
 	}
 }
