@@ -1,0 +1,32 @@
+using System;
+
+namespace While
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int num, soma = 0;
+            const int FIM = 0;
+
+            num = LeNumero();
+            while (num != FIM)
+            {
+                soma = soma + num;
+                num = LeNumero();
+            }
+            Console.WriteLine($"Soma = {soma}");
+            Console.ReadLine();
+        }
+
+        static int LeNumero()
+        {
+            int numero;
+
+            Console.Write("Entre com um número: ");
+            numero = Convert.ToInt32(Console.ReadLine());
+
+            return numero;
+        }
+    }
+}
