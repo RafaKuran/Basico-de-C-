@@ -1,0 +1,71 @@
+using System;
+
+namespace ValidaData
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int dia, mes, ano;
+
+            dia = LeData("Entre com o dia: ");
+            mes = LeData("Entre com o mês: ");
+            ano = LeData("Entre com o ano: ");
+            ValidaData(dia, mes, ano);
+            Console.ReadLine();
+        }
+
+        static int LeData(string msg)
+        {//método 
+            int dia;
+
+            Console.Write(msg);
+            dia = Convert.ToInt32(Console.ReadLine());
+            return dia;
+        }
+
+        static void ValidaData(int dia, int mes, int ano)
+        {
+            if (ano < 1900)
+            {
+                Console.WriteLine("Ano inválido!");
+            }
+            else
+            {
+                switch (mes)
+                {
+                    case 4: case 6: case 9: case 11:
+                        if ((dia < 0) || (dia > 30)){
+                            Console.WriteLine("Dia inválido!");
+                        }
+                        break;
+                    case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+                        if ((dia < 0) || (dia > 31))
+                        {
+                            Console.WriteLine("Dia inválido!");
+                        }
+                        break;
+                    case 2:
+                        if ((ano % 4) == 0)
+                        {
+                            if ((dia < 0) || (dia > 29))
+                            {
+                                Console.WriteLine("Dia inválido!");
+                            }
+                        }
+                        else
+                        {
+                            if ((dia < 0) || (dia > 28))
+                            {
+                                Console.WriteLine("Dia inválido!");
+                            }
+                        }
+                        break;
+                    default:
+                        Console.WriteLine("Mês inválido!");
+                        break;
+                } 
+            }
+        }
+    }
+}
