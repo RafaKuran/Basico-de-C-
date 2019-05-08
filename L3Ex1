@@ -1,0 +1,40 @@
+using System;
+
+namespace L3Ex1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            const char FIM = '.';
+            char carac;
+            int soma = 0;
+
+            carac = LeCaracter();
+            while (carac != FIM)
+            {
+                switch (carac)
+                {
+                    case 'a': case 'e': case 'i': case 'o': case 'u':
+                        soma++;
+                        break;
+                }
+
+                carac = LeCaracter();
+            }
+
+            Console.WriteLine($"O total de vogais é: {soma}");
+            Console.ReadLine();
+        }
+
+        static char LeCaracter()
+        {
+            char carac;
+
+            Console.Write("Entre com o caracter: ");
+            carac = Convert.ToChar(Console.ReadLine());
+
+            return carac;
+        }
+    }
+}
