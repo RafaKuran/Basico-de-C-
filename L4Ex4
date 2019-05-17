@@ -1,0 +1,39 @@
+using System;
+
+namespace Vetor2 {
+    class Program {
+        static void Main(string[] args) {
+            const int TAM = 10;
+            int[] vet = new int[TAM];
+            int soma = 0;
+            double media;
+
+            for (int i = 0; i < vet.Length; i++) {
+                vet[i] = LeNumero();
+            }
+            for (int i = 0; i < vet.Length; i++) {
+                Console.Write("{0} ", vet[i]);
+            }
+            Console.WriteLine();
+            for (int i = 0; i < vet.Length; i++) {
+                soma = soma + vet[i];           
+            }
+            media = (double) soma / vet.Length;
+            Console.WriteLine("Média = {0}", media);
+            for (int i = 0; i < vet.Length; i++) {
+                if (vet[i] > media) {
+                    Console.WriteLine(vet[i]);
+                }
+            }
+            Console.ReadLine();
+        }
+
+        static int LeNumero() {
+            int num;
+
+            Console.Write("Entre com um número: ");
+            num = Convert.ToInt32(Console.ReadLine());
+            return num;
+        }
+    }
+}
