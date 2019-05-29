@@ -1,0 +1,57 @@
+using System;
+namespace ObejtoLista
+{
+    class Aluno
+    {
+        private string nome;
+        private int n1;
+        private int n2;
+
+        //Criando costrutores
+        public Aluno() { }
+
+        public Aluno(string nome, int n1, int n2)
+        {
+            this.nome = nome;
+            this.n1 = n1;
+            this.n2 = n2;
+        }
+
+        //método para retornar o atributo
+        public string GetNome()
+        {
+            return nome;
+        }
+
+        //método para alterar o atributo
+        public void SetNome(string nome)
+        {
+            this.nome = nome;
+        }
+
+        public int Numero
+        {
+            get { return n1; }
+            set { n1 = value; }
+        }
+
+        public int N2
+        {
+            get { return n2; }
+            set { n2 = value; }
+        }
+
+        public double CalculaMedia()
+        {
+            double media;
+
+            media = (double)(n1 + n2) / 2;
+            return media;
+        }
+
+        public override string ToString()
+        {
+            return nome + "" + n1 + "" + n2;
+        }
+    }
+}
