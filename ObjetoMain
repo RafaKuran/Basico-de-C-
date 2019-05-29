@@ -1,0 +1,35 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ObejtoLista
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Aluno aluno = new Aluno("Joana", 5, 9);
+            Aluno aluno2 = new Aluno("Fábio", 6, 7);
+            Aluno aluno3 = new Aluno("Luiz", 8, 10);
+
+            List<Aluno> turma = new List<Aluno>();
+            turma.Add(aluno);
+            turma.Add(aluno2);
+            turma.Add(aluno3);
+
+            for(int i=0; i < turma.Count; i++)
+            {
+                Console.WriteLine($"{turma[i].GetNome()},{turma[i].Numero},{turma[i].N2}");
+            }
+
+            //turma.ForEach(i => Console.WriteLine(turma[i]));
+            foreach (Aluno al in turma)
+            {
+                Console.WriteLine($"{al},{""},{al.CalculaMedia()},{""}");
+            }
+            Console.ReadLine();
+        }
+    }
+}
